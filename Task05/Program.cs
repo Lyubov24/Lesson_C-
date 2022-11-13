@@ -9,7 +9,7 @@ if (number >= 0)
 {
 while (count <= number)
 {
-    Console.Write(count+" ");
+    Console.Write($"{count}, ");
     count++;
 }
 } 
