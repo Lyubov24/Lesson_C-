@@ -13,11 +13,6 @@ while (count <= number)
     count++;
 }
 } 
-else
-{
- while (count >= number)
-{
-    Console.Write(count+" ");
-    count--;
-}
-}
+else Console.Write("Введено некорректное значение");
+
+
