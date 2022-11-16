@@ -4,8 +4,8 @@
 
 Console.WriteLine("Введите число: ");
 
-int N = Convert.ToInt32(Console.ReadLine());
+int n = Convert.ToInt32(Console.ReadLine());
     
-for (int i = 2; i <= N; i += 2)
+for (int i = 2; i <= n; i += 2)
     Console.WriteLine(i);
 
