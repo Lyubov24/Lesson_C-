@@ -7,8 +7,22 @@
 int number = new Random().Next(10, 100);
 Console.WriteLine($"Случайное число из отрезка 10 - 99 --> {number}");
 
-int firstDigit = number / 10;
-int secondDigit = number % 10;
+int firstDigit = number / 10; //7
+int secondDigit = number % 10; //8
 
-if(firstDigit > secondDigit) Console.WriteLine($"Наибольшая цифра числа --> {firstDigit}");
+if (firstDigit > secondDigit) Console.WriteLine($"Наибольшая цифра числа --> {firstDigit}");
 else Console.WriteLine($"Наибольшая цифра числа --> {secondDigit}");
+
+// int MaxDigit(int num) //int num = number       Ошибка: 'Локальная переменная или параметр с именем "MaxDigit" нельзя объявить
+//                                                         в данной области, так как это имя используется во включающей локальной области
+//                                                         для определения локальной переменной или параметра'
+// {
+//     int firstDigit = number / 10; //7
+//     int secondDigit = number % 10; //8
+//     if (firstDigit > secondDigit) return firstDigit;
+//     return secondDigit;
+// }
+// int MaxDigit = MaxDigit(number);
+// Console.WriteLine($"Случайное число из отрезка 10 - 99 --> {MaxDigit}");
+
+
