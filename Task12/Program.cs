@@ -8,11 +8,12 @@ int num1 = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Введите второе число: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
+
 bool Multiplicity(int number1, int number2)
 {
-    if (number1 % number2 == 0) return true;
-    return false;
+    return number1 % number2 == 0;
 }
+
 bool result = Multiplicity(num1, num2);
 Console.WriteLine(result ? "Кратно" : $"Не кратно, остаток = {num1 % num2}");
 
