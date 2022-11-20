@@ -14,7 +14,9 @@ if (number > 999)
         number = number / 10;
     }
     while (number > 999);
-    int result = number % 10;   
+    int result = number % 10;
+
+    Console.WriteLine(result);
 }
 
 if (number > 99)
@@ -25,5 +27,4 @@ if (number > 99)
 }
 if (number < 100)
  Console.WriteLine("третьей цифры нет");
- 
  
