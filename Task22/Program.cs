@@ -14,7 +14,7 @@ void Square(int n1)  // невозвращающий метод
 {
     for (int i = 1; i <= n1; i ++)  //тело метода
     {
-        Console.WriteLine($"{i} -> {i * i}");
+        Console.WriteLine($"{i} | {i * i}");
     }
 }
 Square(n); // обращение к методу
