@@ -4,12 +4,15 @@
 // 1 -> нет
 
 Console.WriteLine("Введите номер дня недели: ");
-string number = Console.ReadLine();
-if (number == "1") Console.WriteLine("Нет");
-else if (number == "2") Console.WriteLine("Нет");
-else if (number == "3") Console.WriteLine("Нет");
-else if (number == "4") Console.WriteLine("Нет");
-else if (number == "5") Console.WriteLine("Нет");
-else if (number == "6") Console.WriteLine("да");
-else if (number == "7") Console.WriteLine("Да");
+
+int number = int.Parse(Console.ReadLine()); 
+                if (number >= 1 && number <= 5) 
+                { 
+                    Console.Write("Нет"); 
+                } 
+ 
+                else if (number >= 6 && number <= 7) 
+                { 
+                    Console.Write("Да"); 
+                } 
 else Console.WriteLine("Введены некорректные данные");
