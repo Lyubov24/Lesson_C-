@@ -17,9 +17,9 @@ int Quarter (int xc, int yc)      //метод
     if(xc > 0 && yc < 0) return 4;
     return 0; //если ни одно условие не выполнится
 }
-
+                                                         //   ? если да, то ... : иначе ...
 int quarter = Quarter(x, y);
- string result = quarter > 0 ? $" Указанные координаты соответствуют четверти -> {quarter}" : "Введены некорректные координаты";
+ string result = quarter > 0 ? $" Указанные координаты соответствуют четверти -> {quarter}" : "Введены некорректные координаты";  // тернарный оператор
 
  Console.WriteLine(result);
 
