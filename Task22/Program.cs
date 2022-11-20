@@ -2,15 +2,20 @@
 // 5 -> 1, 4, 9, 16, 25.
 // 2 -> 1, 4.
 
-Console.WriteLine("Введите число: ");
-int num = Convert.ToInt32(Console.ReadLine());
-
-void Square(int n)  // метод
+int n = -1;
+while (n < 1)
 {
-    for (int i = 1; i <= n; i ++)  //тело метода
+    Console.WriteLine("Введите число: ");
+    n = Convert.ToInt32(Console.ReadLine());
+    if (n < 1) Console.WriteLine("Введены неверные данные");
+}
+
+void Square(int n1)  // невозвращающий метод
+{
+    for (int i = 1; i <= n1; i ++)  //тело метода
     {
         Console.WriteLine($"{i} -> {i * i}");
     }
 }
-Square(num); // обращение к методу
+Square(n); // обращение к методу
 
