@@ -14,3 +14,10 @@ int RemoveSecondDigit(int numb)
     return resalt;
 }
  Console.Write(RemoveSecondDigit(number));
+
+
+
+
+
+
+ 
