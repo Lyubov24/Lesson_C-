@@ -8,25 +8,34 @@
 Console.WriteLine("Введите пятизначное  число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-int a = num / 1000;
-if (a / 100 == 0)
-{
-    int num1 = num % 10;
-    int num11 = num / 10000;
-    if (num1 == num11)
-    {
-        int num2 = num / 10 % 10;
-        int num22 = num / 1000 % 10;
-        if (num2 == num22)
-
-            Console.WriteLine($"{num} -> да");
-    }
-    else Console.WriteLine($"{num} -> нет");
-}
-
-else
+if (num < 0)
 {
     Console.WriteLine("Введены некоректные данные");
 }
+else
+{
+    int a = num / 1000;
+    if (a / 100 == 0)
+    {
+        int num1 = num % 10;
+        int num11 = num / 10000;
+        if (num1 == num11)
+        {
+            int num2 = num / 10 % 10;
+            int num22 = num / 1000 % 10;
+            if (num2 == num22)
 
-// Как проверить на положительность числа не знаю((
+                Console.WriteLine($"{num} -> да");
+            else
+            {
+                Console.WriteLine("Введены некоректные данные");
+            }
+        }
+        else Console.WriteLine($"{num} -> нет");
+    }
+
+    else
+    {
+        Console.WriteLine("Введены некоректные данные");
+    }
+}
