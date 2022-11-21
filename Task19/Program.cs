@@ -10,7 +10,7 @@ int num = Convert.ToInt32(Console.ReadLine());
 
 if (num < 0)
 {
-    Console.WriteLine("Введены некоректные данные");
+    Console.WriteLine("Введены некорректные данные");
 }
 else
 {
@@ -28,7 +28,7 @@ else
                 Console.WriteLine($"{num} -> да");
             else
             {
-                Console.WriteLine("Введены некоректные данные");
+                Console.WriteLine("Введены некорректные данные");
             }
         }
         else Console.WriteLine($"{num} -> нет");
@@ -36,6 +36,6 @@ else
 
     else
     {
-        Console.WriteLine("Введены некоректные данные");
+        Console.WriteLine("Введены некорректные данные");
     }
 }
