@@ -1,20 +1,29 @@
-﻿//Задача 29. Напишите программу, которая задаёт массив из N элементов и выводит их на экран.
-//5 -> [1, 2, 5, 7, 19]
-//3 -> [6, 1, 33]
+﻿
+// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+//1, 2, 5, 7, 19, 6, 1, 
+//33 -> [1, 2, 5, 7, 19, 6, 1, 33]
 
 
+int[] arr = new int[8];
 
-int lenArray = ReadInt("Введите длину массива: ");
-
-int[] randomArray = new int[lenArray];
-for (int i = 0; i < randomArray.Length; i++)
+void RandomArray(int[] array)
 {
-    randomArray[i] = new Random().Next(1, 9);
-    Console.Write(randomArray[i] + " ");
+    Random rnd = new Random();
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = rnd.Next(0, 2);
+    }
 }
 
-int ReadInt(string message)
+void PrintArray(int[] array)
 {
-    Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
 }
+
+RandomArray(arr);
+
+// Console.WriteLine(string.Join(" ", array));
+PrintArray(arr);
