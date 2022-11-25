@@ -24,5 +24,4 @@ void PrintArray(int[] array)
 
 RandomArray(arr);
 
-// Console.WriteLine(string.Join(" ", array));
 PrintArray(arr);
