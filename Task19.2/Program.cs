@@ -1,34 +1,43 @@
-﻿// Задача 19. Напишите программу, которая принимает на вход пятизначное число
-// и проверяет, является ли оно палиндромом.
-// Выполнить с помощью числовых операций (целочисленное деление, остаток от деления).
-// 14212 -> нет
-// 12821 -> да
-// 23432 -> да
+﻿int size = 10;
+int[] numbers = new int[size];
+FillArrayRandomNumbers(numbers);
+PrintArray(numbers);
 
-Console.WriteLine("Введите пятизначное  число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-if (number < 0)
+int max = numbers[0];
+int min = numbers[0];
+
+for (int i = 0; i < numbers.Length; i++)
 {
-    Console.WriteLine("Введены некорректные данные");
-}
-else
-{
-    void Pol5Digit(int num)
+    if (numbers[i] > max)
     {
-        int current = num / 1000;
-        if (current / 100 == 0)
-        {
-            if ((num / 10000) == (num % 10) && (current % 10) == (num % 100))
-            {
-                Console.WriteLine($"{num} -> Да");
-            }
-            else Console.WriteLine($"{num} -> Нет");
-        }
-        else Console.WriteLine("Введены некорректные данные");
-
+        max = numbers[i];
     }
-    Pol5Digit(number);
+    else if (numbers[i] < min)
+    {
+        min = numbers[i];
+    }
+}
+
+Console.WriteLine($"Минимальное число: {min}");
+Console.WriteLine($"Минимальное число: {max}");
+Console.WriteLine($"Разница между максимальным и минимальным числами: {max-min}");
+
+
+
+void FillArrayRandomNumbers(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(1, 555);
+    }
 }
 
 
-// НЕ ДОРАБОТАНА
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
