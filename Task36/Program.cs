@@ -14,7 +14,7 @@ int[] CeateArrayRndInt(int size, int min, int max)
     }
     return arr;
 }
-int[] array = CeateArrayRndInt(4, - 10, 10);
+int[] array = CeateArrayRndInt(6, - 10, 10);
 PrintArray(array);
 
 
@@ -29,15 +29,19 @@ void PrintArray(int[] arr)
     Console.WriteLine("]");
 }
 
-int countElement = 0;
-for (int i = 1; i < array.Length; i += 2)
-{
-    countElement += array[i];
-}
-Console.Write(countElement);
 
-
-
+int CountElement(int[] array) // метод суммирующий числа, стоящие на нечетных позициях
+{ 
+    int countElement = 0; 
+    for (int i = 1; i < array.Length; i += 2) 
+    { 
+        countElement += array[i]; 
+    } 
+    return countElement; 
+} 
+ 
+int countElement = CountElement(array); 
+Console.Write(countElement);    
 
 
 
