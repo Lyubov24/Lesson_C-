@@ -36,12 +36,11 @@ void PrintMatrix(int[,] matrix) // метод, который печатает �
 
 void squareEventNumbersMatrix(int[,] matrix) // параметры - исходные данные метода
 {
-    for (int i = 0; i < matrix.GetLength(0); i++) 
+    for (int i = 0; i < matrix.GetLength(0); i+=2)  // i+=2 будет идти по четным индексам
     {
-        for (int j = 0; j < matrix.GetLength(1); j++) 
+        for (int j = 0; j < matrix.GetLength(1); j+=2) 
         {
-            if (i % 2 == 0 && j % 2 == 0)
-            matrix[i, j] *= matrix[i, j];
+            matrix[i, j] *= matrix[i, j]; // matrix[i, j] * matrix[i, j]
         }
 
     }
