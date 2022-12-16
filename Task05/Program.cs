@@ -16,3 +16,6 @@ if (number >= 0)
 else Console.Write("Введено некорректное значение");
 
 
+//int af = -5;
+//int uf = 5;
+//Console.Write($"{af} .. {uf}");
